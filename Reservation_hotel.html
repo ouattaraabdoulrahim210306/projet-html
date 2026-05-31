@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réservez votre hôtel à Bobo-Dioulasso">
+    <title>Réservation d'hôtel - Bobo-Dioulasso Tourisme</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header id="header">
+        <img src="logo1.jpg" alt="Logo de Bobo-Dioulasso Tourisme" width="100">
+        <h1>Sites touristiques de Bobo-Dioulasso</h1>
+    </header>
+
+    <nav id="main-nav">
+        <a href="index.html" class="onglet">Accueil</a>
+        <a href="Patrimoine.html" class="onglet">Patrimoine</a>
+        <a href="Reservation_hotel.html" class="onglet">Réservation d'hôtel</a>
+        <a href="Galerie.html" class="onglet">Galerie</a>
+    </nav>
+
+    <main>
+        <h2>Réservation d'hôtel à Bobo-Dioulasso</h2>
+        
+        <form action="traitement_reservation.php" method="post">
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required><br>
+
+                <label for="prenoms">Prénoms :</label>
+                <input type="text" id="prenoms" name="prenoms" required><br>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Détails du séjour</legend>
+
+                <label for="hotel">Choix de l'hôtel :</label>
+                <select id="hotel" name="hotel">
+                    <option value="">-- Sélectionnez un hôtel --</option>
+                    <option value="Hôtel Splendid">Hôtel Splendid - Centre-ville</option>
+                    <option value="Hôtel Laico">Hôtel Laico - Quartier résidentiel</option>
+                    <option value="Auberge de la Gare">Auberge de la Gare - Proche gare</option>
+                    <option value="Résidence Les Palmiers">Résidence Les Palmiers - Quartier calme</option>
+                    <option value="Hôtel L'Escale">Hôtel L'Escale - Route de Ouagadougou</option>
+                    <option value="Hôtel Le Relais">Hôtel Le Relais - Proche gare routière</option>
+                </select><br>
+
+                <label for="date_arrivee">Date d'arrivée :</label>
+                <input type="date" id="date_arrivee" name="date_arrivee" required><br>
+
+                <label for="date_depart">Date de départ :</label>
+                <input type="date" id="date_depart" name="date_depart" required><br>
+
+                <label for="nb_personnes">Nombre de personnes :</label>
+                <input type="number" id="nb_personnes" name="nb_personnes" min="1" value="1"><br>
+
+                <label for="type_chambre">Type de chambre :</label>
+                <select id="type_chambre" name="type_chambre">
+                    <option value="">-- Sélectionnez un type de chambre --</option>
+                    <option value="Chambre Simple">Chambre Simple (1 lit simple)</option>
+                    <option value="Chambre Double">Chambre Double (1 lit double)</option>
+                    <option value="Chambre Twin">Chambre Twin (2 lits simples)</option>
+                    <option value="Chambre Triple">Chambre Triple (3 lits)</option>
+                    <option value="Suite">Suite (Lit double + salon)</option>
+                    <option value="Chambre Familiale">Chambre Familiale (4-6 personnes)</option>
+                </select><br>
+            </fieldset>
+
+            <button type="submit">Confirmer ma réservation</button>
+            <button type="reset">Tout effacer</button>
+        </form>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2026 - Bobo-Dioulasso Tourisme | Tous droits réservés</p>
+    </footer>
+</body>
+</html>
